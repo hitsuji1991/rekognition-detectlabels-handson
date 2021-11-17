@@ -35,16 +35,8 @@ Resources:
                 - "s3:ListBucket"
                 - "s3:CreateBucket"
                 - "s3:PutObject"
-                - "dynamodb:CreateTable"
-                - "dynamodb:ListTables"
-                - "dynamodb:PutItem"
-                - "dynamodb:GetItem"
+                - "s3:DeleteBucket"
                 - "iam:PassRole"
-                - "sagemaker:CreateHumanTaskUi"
-                - "sageMaker:CreateFlowDefinition"
-                - "sagemaker:DescribeFlowDefinition"
-                - "sagemaker:StartHumanLoop"
-                - "sagemaker:ListHumanLoops"
                 Resource: "*"
 Outputs:
   BasicNotebookInstanceId:
