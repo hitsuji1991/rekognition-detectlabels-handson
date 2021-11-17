@@ -112,10 +112,3 @@
 ![](media/image19.png)画面上部にある「削除」を押下します。
 <br />
 <br />
-
-
-<a id="del_no"></a>
-### 手順
-![](media/image.png)
-<br />
-<br />
