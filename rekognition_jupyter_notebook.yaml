@@ -36,6 +36,7 @@ Resources:
                 - "s3:CreateBucket"
                 - "s3:PutObject"
                 - "s3:DeleteBucket"
+                - "s3:DeleteObject"
                 - "iam:PassRole"
                 Resource: "*"
 Outputs:
