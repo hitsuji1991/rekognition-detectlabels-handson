@@ -1,0 +1,51 @@
+Description: "Notebook Instance for use with Rekognition"
+Resources:
+  RekNotebookInstance:
+    Type: "AWS::SageMaker::NotebookInstance"
+    Properties:
+      InstanceType: "ml.t2.medium"
+      RoleArn: !GetAtt ExecutionRole.Arn
+      VolumeSizeInGB: 5
+  ExecutionRole:
+    Type: "AWS::IAM::Role"
+    Properties:
+      ManagedPolicyArns:
+      - "arn:aws:iam::aws:policy/AmazonRekognitionFullAccess"
+      AssumeRolePolicyDocument:
+        Version: "2012-10-17"
+        Statement:
+          -
+            Effect: "Allow"
+            Principal:
+              Service:
+                - "sagemaker.amazonaws.com"
+            Action:
+              - "sts:AssumeRole"
+      Path: "/"
+      Policies:
+        -
+          PolicyName: "root"
+          PolicyDocument:
+            Version: "2012-10-17"
+            Statement:
+              -
+                Effect: "Allow"
+                Action: 
+                - "s3:GetObject"
+                - "s3:ListBucket"
+                - "s3:CreateBucket"
+                - "s3:PutObject"
+                - "dynamodb:CreateTable"
+                - "dynamodb:ListTables"
+                - "dynamodb:PutItem"
+                - "dynamodb:GetItem"
+                - "iam:PassRole"
+                - "sagemaker:CreateHumanTaskUi"
+                - "sageMaker:CreateFlowDefinition"
+                - "sagemaker:DescribeFlowDefinition"
+                - "sagemaker:StartHumanLoop"
+                - "sagemaker:ListHumanLoops"
+                Resource: "*"
+Outputs:
+  BasicNotebookInstanceId:
+    Value: !Ref RekNotebookInstance
