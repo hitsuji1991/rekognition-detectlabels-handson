@@ -112,3 +112,11 @@
 ![](media/image19.png)画面上部にある「削除」を押下します。
 <br />
 <br />
+
+---
+## 参考
+本ハンズオンは以下を参考に作成しました。
+
+[Amazon Rekognition Custom Labels で特定の動作を認識する機械学習モデルを作る](https://aws.amazon.com/jp/blogs/news/amazon-rekognition-custom-labels-motion-detect/)
+<br />
+[Amazon Rekognition Custom Labels で動きを認識できるか~猫パンチで試してみた](https://qiita.com/mariohcat/items/d5b303f161c5f74c4bbc)
