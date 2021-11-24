@@ -42,7 +42,7 @@
 <br />
 <a id="no8"></a>
 ### 手順8
-![](media/image8.png)スタックが作成されます.
+![](media/image8.png)スタックが作成されます.(スタックの作成に5分ほどかかります。)
 <br />
 <br />
 <a id="no9"></a>
@@ -67,7 +67,7 @@
 <br />
 <a id="no13"></a>
 ### 手順13
-![](media/image13.png)SageMaker ノートブックインスタンス上のJupyter環境にアクセスできました。右上の「New」を押下し、一覧から「Terminal」を押下します。
+![](media/image13.png)SageMaker ノートブックインスタンス上のJupyter環境にアクセスできました。右上の「New」を押下し、一覧から「Terminal」を押下します（リストの最下部にあります）。
 <br />
 <br />
 <a id="no14"></a>
