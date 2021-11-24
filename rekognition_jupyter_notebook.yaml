@@ -9,8 +9,6 @@ Resources:
   ExecutionRole:
     Type: "AWS::IAM::Role"
     Properties:
-      ManagedPolicyArns:
-      - "arn:aws:iam::aws:policy/AmazonRekognitionFullAccess"
       AssumeRolePolicyDocument:
         Version: "2012-10-17"
         Statement:
@@ -22,23 +20,9 @@ Resources:
             Action:
               - "sts:AssumeRole"
       Path: "/"
-      Policies:
-        -
-          PolicyName: "root"
-          PolicyDocument:
-            Version: "2012-10-17"
-            Statement:
-              -
-                Effect: "Allow"
-                Action: 
-                - "s3:GetObject"
-                - "s3:ListBucket"
-                - "s3:CreateBucket"
-                - "s3:PutObject"
-                - "s3:DeleteBucket"
-                - "s3:DeleteObject"
-                - "iam:PassRole"
-                Resource: "*"
+      ManagedPolicyArns:
+      - "arn:aws:iam::aws:policy/AmazonRekognitionFullAccess"
+      - "arn:aws:iam::aws:policy/AmazonS3FullAccess"
 Outputs:
   BasicNotebookInstanceId:
     Value: !Ref RekNotebookInstance
